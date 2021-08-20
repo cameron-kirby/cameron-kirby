@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import { StyledNavigation } from './Navigation.styled'
 import { GithubSquare, Linkedin } from '@styled-icons/fa-brands'
 

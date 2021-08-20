@@ -19,21 +19,21 @@ export const StyledNavigation = styled.nav`
     }
 
     .nav-toggle {
+        display: block;
         cursor: pointer;
         width: 2rem;
-        padding: 0;
+        padding: 1rem;
         position: relative;
         /* Animation */
         transform: rotate(0deg);
         transition: .5s ease-in-out;
 
         span {
-            display: block;
+            // display: block;
             position: absolute;
             height: 6px;
             width: 100%;
             background: var(--black);
-            opacity: 1;
             left: 0;
             /* Animation */
             transform: rotate(0deg);
@@ -42,38 +42,38 @@ export const StyledNavigation = styled.nav`
                 if(!navOpen){
                     return `
                         :nth-child(1) {
-                            top: -.75rem;
-                        }
-
-                        :nth-child(2), :nth-child(3) {
                             top: 0rem;
                         }
 
+                        :nth-child(2), :nth-child(3) {
+                            top: calc(50% - 3px);
+                        }
+
                         :nth-child(4) {
-                            top: .75rem;
+                            top: calc(100% - 6px);
                         }
                     `
                 } else {
                     return `
                         width: 100%;
                         :nth-child(1) {
-                            top: 0rem;
+                            top: calc(50% - 3px);
                             width: 0%;
                             left: 50%;
                         }
 
                         :nth-child(2) {
-                            top: 0rem;
+                            top: calc(50% - 3px);
                             transform: rotate(45deg);
                         }
 
                         :nth-child(3) {
-                            top: 0rem;
+                            top: calc(50% - 3px);
                             transform: rotate(-45deg);
                         }
 
                         :nth-child(4) {
-                            top: 0rem;
+                            top: calc(50% - 3px);
                             width: 0%;
                             left: 50%;
                         }
