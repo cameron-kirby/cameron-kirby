@@ -120,6 +120,23 @@ export const StyledNavigation = styled.nav`
                 }
             }
         }
+
+        .social-media-items {
+            margin-top: 1rem;
+
+            a { 
+                color: var(--blue);
+                padding: 0 .5rem;
+                transition: color .35s cubic-bezier(var(--transition-main), 1);
+
+                :hover {
+                    color: var(--black)
+                }
+                svg {
+                    width: 2rem;
+                }
+            }
+        }
     }
 }
 `

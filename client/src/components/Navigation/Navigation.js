@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom";
 import { StyledNavigation } from './Navigation.styled'
+import { GithubSquare, Linkedin } from '@styled-icons/fa-brands'
+
 
 const Navigation = ({ navOpen, setNavOpen }) => {
 
@@ -27,6 +29,14 @@ const Navigation = ({ navOpen, setNavOpen }) => {
                         <Link to="/profile">Profile</Link>
                         <Link to="/journal">Journal</Link>
                         <Link to="/contact">Contact</Link>
+                    </div>
+                    <div className="social-media-items">
+                        <a href="https://github.com/cameron-kirby" target="_blank">
+                            <GithubSquare/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kameroncirby/" target="_blank">
+                            <Linkedin/>
+                        </a>
                     </div>
                 </div>
             </div>
