@@ -45,20 +45,56 @@ html, body {
   width: 100%;
   max-width: 100vw;
   max-height: 100vw;
-  overflow: hidden;
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
-}
+/* ============
+  Typography
+============ */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+/* Font Size */
+h1 {
+  font-size: var(--heading-large);
+}
+h2 {
+  font-size: var(--heading-medium);
+}
+h3 {
+  font-size: var(--heading-small);
+}
+h4 {
+  font-size: calc(var(--heading-small) - .2rem);
+}
+h5 {
+  font-size: calc(var(--heading-small) - .4rem);
+}
+h6 {
+  font-size: calc(var(--heading-small) - .6rem);
+}
+/* Font Weight */
+h1, h2 {
+  font-weight: 900;
+}
+h3, h4, h5, h6 {
+  font-weight: 800;
+}
+/* Paragraphs */
+p {
+  margin: 0;
+  font-size: var(--paragraph);
+}
+/* Lists */
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

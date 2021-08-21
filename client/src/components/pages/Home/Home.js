@@ -6,7 +6,9 @@ const Home = () => {
 
     return (
         <StyledHome>
-            Hello world!
+            <section id="landing">
+                <h1>Hello world!</h1>
+            </section>
         </StyledHome>
     );
 }

@@ -31,10 +31,10 @@ const Navigation = ({ navOpen, setNavOpen }) => {
                         <Link to="/contact">Contact</Link>
                     </div>
                     <div className="social-media-items">
-                        <a href="https://github.com/cameron-kirby" target="_blank">
+                        <a href="https://github.com/cameron-kirby" target="_blank" rel="noreferrer">
                             <GithubSquare/>
                         </a>
-                        <a href="https://www.linkedin.com/in/kameroncirby/" target="_blank">
+                        <a href="https://www.linkedin.com/in/kameroncirby/" target="_blank" rel="noreferrer">
                             <Linkedin/>
                         </a>
                     </div>

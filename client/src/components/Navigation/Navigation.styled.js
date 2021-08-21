@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledNavigation = styled.nav`
 
 .header {
-    position: sticky;
+    position: fixed;
     z-index: 2; /* Sit on top */
     width: 100%;
     padding: 30px 55px;

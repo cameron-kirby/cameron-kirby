@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { Switch, Route } from "react-router-dom";
 import './App.css';
-import { useOnClickOutside } from "./hooks";
+import { useOnClickOutside, useWindowDimensions } from "./hooks";
 import { Navigation } from "./components"
-import { Home } from "./components/pages"
+import { Home, Work } from "./components/pages"
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             </div>
                 <Switch>
                     <Route path="/work">
-                        Hello work!
+                        <Work useWindowDimensions={useWindowDimensions}/>
                     </Route>
                     <Route path="/profile">
                         Hello profile!
