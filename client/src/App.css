@@ -96,6 +96,10 @@ ol, ul {
   margin: 0;
   padding: 0;
 }
+/* Active link */
+.isActive {
+  color: var(--black) !important;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

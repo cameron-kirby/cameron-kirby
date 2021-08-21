@@ -50,13 +50,14 @@ export const StyledWork = styled.div`
                 .work-item-body {
                     h3 {
                         padding: 1rem 0;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         font-weight: 300;
                         text-transform: uppercase;
                     }
                     p {
                         padding-bottom: 2rem;
                         font-size: 1.7rem;
+                        font-weight: 600;
                     }
                 }
             }

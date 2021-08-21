@@ -15,14 +15,14 @@ export const StyledNavigation = styled.nav`
         text-decoration: none;
         color: var(--black);
         font-weight: 900;
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .nav-toggle {
         display: block;
         cursor: pointer;
-        width: 2rem;
-        padding: 1rem;
+        width: 1.5rem;
+        padding: .8rem;
         position: relative;
         /* Animation */
         transform: rotate(0deg);
@@ -31,7 +31,7 @@ export const StyledNavigation = styled.nav`
         span {
             // display: block;
             position: absolute;
-            height: 6px;
+            height: 5px;
             width: 100%;
             background: var(--black);
             left: 0;
@@ -91,14 +91,16 @@ export const StyledNavigation = styled.nav`
     z-index: 1; /* Sit on top */
     left: 50%;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--offwhite);
     overflow-x: hidden;
     transform: ${({ navOpen }) => navOpen ? 'translateX(0)' : 'translateX(+100%)'};
-    transition: transform .35s cubic-bezier(var(--transition-main), 1);
+    transition: transform .7s cubic-bezier(.23,1,.32,1);
 
     .overlay-content {
         position: relative;
-        top: 25%; /* 25% from the top */
         width: 100%; /* 100% width */
         text-align: center; /* Centered text/links */
         margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
@@ -111,8 +113,8 @@ export const StyledNavigation = styled.nav`
                 text-decoration: none;
                 color: var(--blue);
                 font-weight: 700;
-                font-size: 2.5rem;
-                margin: .5rem 0;
+                font-size: 3.5rem;
+                margin: .3rem 0;
                 transition: color .35s cubic-bezier(var(--transition-main), 1);
 
                 :hover {
@@ -133,7 +135,7 @@ export const StyledNavigation = styled.nav`
                     color: var(--black)
                 }
                 svg {
-                    width: 2rem;
+                    width: 3rem;
                 }
             }
         }
