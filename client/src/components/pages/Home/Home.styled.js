@@ -2,7 +2,7 @@ import styled from "styled-components"
 import section1bg from "../../../img/homebg.jpg"
 
 export const StyledHome = styled.div`
-    #landing {
+    #home-landing {
         width: 100%;
         height: 99vh;
 
@@ -46,25 +46,76 @@ export const StyledHome = styled.div`
         }
     }
 
-    #section-2 {
-        width: 100%;
-        height: 20vh;
-        background-color: var(--orange);
+    #home-recentwork {
+        background-color: var(--white);
 
-        .section-banner { 
+        .section-heading { 
+            padding: 2rem 55px 2rem;
+            border-bottom: 1px solid rgba(159,174,176,.35);
             display: flex;
             align-items: center;
-            justify-content: center;
             color: var(--black);
-            
-            .banner-text{
-                font-weight: 600;
-                font-size: 2rem;
-            }
 
             .icon {
-                margin: 1rem;
+                margin-right: 1rem;
                 width: 3rem;
+            }
+        }
+
+        .work-row {
+            margin-left: -55px;
+            padding: 3rem 55px;
+            display: flex;
+            justify-content: space-between;
+
+            .work-item {
+                width: 25%;
+                padding-left: 55px;
+
+                .work-item-media {
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .work-item-body {
+                    h4 {
+                        padding: 1rem 0;
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        padding-bottom: 1rem;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .work-sectionfooter {
+            padding: 2rem 55px 2rem;
+            border-bottom: 1px solid rgba(159,174,176,.35);
+            background-color: var(--black);
+            color: var(--white);
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer-row {
+                display: flex;
+                justify-content: space-between;
+
+                .icon {
+                    width: 3rem;
+                }
             }
         }
     }
