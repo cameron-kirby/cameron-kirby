@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import './App.css';
 import { useOnClickOutside, useWindowDimensions } from "./hooks";
 import { Navigation } from "./components"
-import { Home, Work } from "./components/pages"
+import { Home, Work, Profile } from "./components/pages"
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
                         <Work useWindowDimensions={useWindowDimensions}/>
                     </Route>
                     <Route path="/profile">
-                        Hello profile!
+                        <Profile/>
                     </Route>
                     <Route path="/journal">
                         Hello journal!
