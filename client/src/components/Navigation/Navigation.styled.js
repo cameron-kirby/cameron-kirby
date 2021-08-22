@@ -10,6 +10,7 @@ export const StyledNavigation = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--white);
 
     .logo {
         text-decoration: none;
