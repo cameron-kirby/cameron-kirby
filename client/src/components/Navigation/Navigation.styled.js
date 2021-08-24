@@ -5,11 +5,16 @@ export const StyledNavigation = styled.nav`
     position: fixed;
     z-index: 1; /* Sit on top */
     width: 100%;
-    padding: 30px 55px;
+    padding: 30px var(--margin-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: ${props => props.headerColor};
+
+    @media (max-width:481px)  { 
+        /* smartphones, iPhone, portrait 480x320 phones */ 
+        padding: 30px var(--mobile-margin-width);
+    }
 
     .logo {
         text-decoration: none;
@@ -21,7 +26,7 @@ export const StyledNavigation = styled.nav`
     
 .nav-toggle {
     position: fixed;
-    top: 33px;
+    top: 35px;
     right: 55px;
     display: block;
     cursor: pointer;
@@ -31,6 +36,11 @@ export const StyledNavigation = styled.nav`
     /* Animation */
     transform: rotate(0deg);
     transition: .5s ease-in-out;
+
+    @media (max-width:481px)  { 
+        /* smartphones, iPhone, portrait 480x320 phones */ 
+        right: var(--mobile-margin-width);
+    }
 
     span {
         // display: block;
@@ -103,6 +113,12 @@ export const StyledNavigation = styled.nav`
     overflow-x: hidden;
     transform: ${({ navOpen }) => navOpen ? 'translateX(0)' : 'translateX(+100%)'};
     transition: transform .7s cubic-bezier(.23,1,.32,1);
+
+    @media (max-width:481px)  { 
+        /* smartphones, iPhone, portrait 480x320 phones */ 
+        left: 0%;
+        width: 100%;
+    }
 
     .overlay-content {
         position: relative;

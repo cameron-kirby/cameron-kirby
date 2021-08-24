@@ -5,10 +5,17 @@ export const StyledProfile = styled.div`
         width: 100%;
         min-height: 100vh;
         background-color: var(--black);
-        padding: 118px 55px 70px;
+        padding: 118px var(--margin-width) 70px;
+
+        @media (max-width:481px)  { 
+            /* smartphones, iPhone, portrait 480x320 phones */ 
+            padding: 118px var(--mobile-margin-width) 70px;
+        }
+
         .page-links {
             width: 100%;
             padding-bottom: 1.3rem;
+
             ul {
                 padding: 0 0 37px;
 
@@ -29,6 +36,7 @@ export const StyledProfile = styled.div`
                 }
             }
         }
+
         .landing-text {
             color: var(--white);
             width: 83.33333%;
@@ -44,12 +52,23 @@ export const StyledProfile = styled.div`
 
     #profile-blurbs {
         .section-heading {
-            padding: 2rem 55px 2rem;
+            padding: 2rem var(--margin-width);
             border-bottom: 1px solid rgba(159,174,176,.35);
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 2rem var(--mobile-margin-width);
+            }
         }
+
         .blurb-row {
-            padding: 3rem 55px;
+            padding: 3rem var(--margin-width);
             border-bottom: 1px solid rgba(159,174,176,.35);
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 3rem var(--mobile-margin-width);
+            }
 
             :last-child {
                 padding-bottom: 6rem;
@@ -60,13 +79,31 @@ export const StyledProfile = styled.div`
                 display: flex;
                 justify-content: space-between;
 
+                @media (max-width:481px)  { 
+                    /* smartphones, iPhone, portrait 480x320 phones */ 
+                    flex-direction: column;
+                    width: 100%;
+                }
+
                 .blurb-row-title {
                     width: 25%;
+
+                    @media (max-width:481px)  { 
+                        /* smartphones, iPhone, portrait 480x320 phones */ 
+                        width: 100%;
+                    }
                 }
                 
                 .blurb-row-body {
                     width: 50%;
                     padding-left: 15px;
+
+                    @media (max-width:481px)  { 
+                        /* smartphones, iPhone, portrait 480x320 phones */ 
+                        width: 100%;
+                        padding-left: 0;
+                        margin-top: 1rem;
+                    }
 
                     p {
                         font-size: 1.5rem;
@@ -81,14 +118,25 @@ export const StyledProfile = styled.div`
         color: var(--white);
 
         .section-heading {
-            padding: 2rem 55px 2rem;
+            padding: 2rem var(--margin-width);
             border-bottom: 1px solid rgba(159,174,176,.35);
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 2rem var(--mobile-margin-width);
+            }
         }
 
         .skills-row {
-            padding: 3rem 55px;
+            padding: 2rem var(--margin-width);
             display: flex;
             justify-content: space-between;
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 2rem var(--mobile-margin-width);
+                flex-direction: column;
+            }
 
             .skills-column {
                 width: 25%;
@@ -97,8 +145,22 @@ export const StyledProfile = styled.div`
                     width: 33.3333%
                 }
 
+                @media (max-width:481px)  { 
+                    /* smartphones, iPhone, portrait 480x320 phones */ 
+                    width: 100%;
+
+                    :last-child {
+                        width: 100%;
+                    }
+                }
+
                 .column-title {
                     padding-bottom: 2rem;
+
+                    @media (max-width:481px)  { 
+                        /* smartphones, iPhone, portrait 480x320 phones */ 
+                        padding: 2rem 0;
+                    }
                 }
 
                 .column-list {

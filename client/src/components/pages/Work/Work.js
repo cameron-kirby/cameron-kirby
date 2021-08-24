@@ -42,14 +42,26 @@ const Work = ({ useWindowDimensions }) => {
         const yOffset = masonryCollection[0].getBoundingClientRect().top
         const columnSize = (width - (3*55)) / 2
         const leftBound = `${(columnSize + 55)}px`
-        for (let i = 0; i < masonryCollection.length; i++){
-            masonryCollection[i].style.left = ((i+1)%2===0) ? leftBound : "0px";
-            if (i > 1) {
-                masonryCollection[i].style.top = `${(masonryCollection[i-2].getBoundingClientRect().bottom) - yOffset}px`
-            } else {
-                masonryCollection[i].style.top = "0px"
+        if ( width > 481 ) {
+            for (let i = 0; i < masonryCollection.length; i++){
+                masonryCollection[i].style.left = ((i+1)%2===0) ? leftBound : "0px";
+                if (i > 1) {
+                    masonryCollection[i].style.top = `${(masonryCollection[i-2].getBoundingClientRect().bottom) - yOffset}px`
+                } else {
+                    masonryCollection[i].style.top = "0px"
+                }
+            }
+        } else {
+            for (let i = 0; i < masonryCollection.length; i++){
+                masonryCollection[i].style.left = "0px";
+                if (i > 0) {
+                    masonryCollection[i].style.top = `${(masonryCollection[i-1].getBoundingClientRect().bottom) - yOffset}px`
+                } else {
+                    masonryCollection[i].style.top = "0px"
+                }
             }
         }
+        
     }, [width])
 
     return (

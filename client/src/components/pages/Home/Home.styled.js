@@ -50,11 +50,16 @@ export const StyledHome = styled.div`
         background-color: var(--white);
 
         .section-heading { 
-            padding: 2rem 55px 2rem;
+            padding: 2rem var(--margin-width);
             border-bottom: 1px solid rgba(159,174,176,.35);
             display: flex;
             align-items: center;
             color: var(--black);
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 2rem var(--mobile-margin-width);
+            }
 
             .icon {
                 margin-right: 1rem;
@@ -63,14 +68,25 @@ export const StyledHome = styled.div`
         }
 
         .work-row {
-            margin-left: -55px;
-            padding: 3rem 55px;
+            margin-left: calc(-1 * var(--margin-width));
+            padding: 3rem var(--margin-width);
             display: flex;
             justify-content: space-between;
 
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                margin-left: calc(-1 * var(--mobile-margin-width));
+                padding: 3rem var(--mobile-margin-width);
+            }
+
             .work-item {
                 width: 25%;
-                padding-left: 55px;
+                padding-left: var(--margin-width);
+
+                @media (max-width:481px)  { 
+                    /* smartphones, iPhone, portrait 480x320 phones */ 
+                    padding-left: var(--mobile-margin-width);
+                }
 
                 .work-item-media {
                     img {
@@ -99,10 +115,15 @@ export const StyledHome = styled.div`
         }
 
         .work-sectionfooter {
-            padding: 2rem 55px 2rem;
+            padding: 2rem var(--margin-width);
             border-bottom: 1px solid rgba(159,174,176,.35);
             background-color: var(--black);
             color: var(--white);
+
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                padding: 2rem var(--mobile-margin-width);
+            }
 
             a {
                 color: white;
