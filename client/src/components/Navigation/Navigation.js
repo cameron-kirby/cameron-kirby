@@ -1,24 +1,37 @@
 import React from "react"
-import { Link, useLocation} from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { StyledNavigation } from './Navigation.styled'
 import { GithubSquare, Linkedin } from '@styled-icons/fa-brands'
 
 
 const Navigation = ({ navOpen, setNavOpen }) => {
+    let headerColor = "white"
+    let textColor = "black"
+
+    if (useLocation().pathname === "/") {
+        headerColor = "transparent"
+        textColor = "white"
+    }
+    if(useLocation().pathname === "/profile") {
+        headerColor = "black"
+        textColor = "white"
+    }
+
+
     const handleMenuToggle = () => {
         setNavOpen(prevNavOpen => !prevNavOpen)
     }
 
     return (
-        <StyledNavigation navOpen={navOpen}>
+        <StyledNavigation navOpen={navOpen} headerColor={headerColor} textColor={textColor}>
             <div className="header">
                 <Link to="/" className="logo" onClick={navOpen ? handleMenuToggle:undefined}>CAMERON KIRBY</Link>
-                <div className="nav-toggle" onClick={handleMenuToggle}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            </div>
+            <div className="nav-toggle" onClick={handleMenuToggle}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <div className="overlay">
                 <div className="overlay-content">

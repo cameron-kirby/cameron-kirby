@@ -1,95 +1,99 @@
 import styled from "styled-components"
 
 export const StyledNavigation = styled.nav`
-
 .header {
     position: fixed;
-    z-index: 2; /* Sit on top */
+    z-index: 1; /* Sit on top */
     width: 100%;
     padding: 30px 55px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--white);
+    background-color: ${props => props.headerColor};
 
     .logo {
         text-decoration: none;
-        color: var(--black);
+        color: ${props => props.textColor};
         font-weight: 900;
         font-size: 2rem;
     }
+}
+    
+.nav-toggle {
+    position: fixed;
+    top: 33px;
+    right: 55px;
+    display: block;
+    cursor: pointer;
+    width: 1.5rem;
+    padding: .8rem;
+    z-index: 3;
+    /* Animation */
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
 
-    .nav-toggle {
-        display: block;
-        cursor: pointer;
-        width: 1.5rem;
-        padding: .8rem;
-        position: relative;
+    span {
+        // display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: ${props => props.textColor};
+        left: 0;
         /* Animation */
         transform: rotate(0deg);
-        transition: .5s ease-in-out;
+        transition: .25s ease-in-out;
+        ${({ navOpen }) => {
+            if(!navOpen){
+                return `
+                    :nth-child(1) {
+                        top: 0rem;
+                    }
 
-        span {
-            // display: block;
-            position: absolute;
-            height: 5px;
-            width: 100%;
-            background: var(--black);
-            left: 0;
-            /* Animation */
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-            ${({ navOpen }) => {
-                if(!navOpen){
-                    return `
-                        :nth-child(1) {
-                            top: 0rem;
-                        }
+                    :nth-child(2), :nth-child(3) {
+                        top: calc(50% - 3px);
+                    }
 
-                        :nth-child(2), :nth-child(3) {
-                            top: calc(50% - 3px);
-                        }
+                    :nth-child(4) {
+                        top: calc(100% - 6px);
+                    }
+                `
+            } else {
+                return `
+                    background: var(--black);
+                    width: 100%;
+                    :nth-child(1) {
+                        top: calc(50% - 3px);
+                        width: 0%;
+                        left: 50%;
+                    }
 
-                        :nth-child(4) {
-                            top: calc(100% - 6px);
-                        }
-                    `
-                } else {
-                    return `
-                        width: 100%;
-                        :nth-child(1) {
-                            top: calc(50% - 3px);
-                            width: 0%;
-                            left: 50%;
-                        }
+                    :nth-child(2) {
+                        top: calc(50% - 3px);
+                        transform: rotate(45deg);
+                    }
 
-                        :nth-child(2) {
-                            top: calc(50% - 3px);
-                            transform: rotate(45deg);
-                        }
+                    :nth-child(3) {
+                        top: calc(50% - 3px);
+                        transform: rotate(-45deg);
+                    }
 
-                        :nth-child(3) {
-                            top: calc(50% - 3px);
-                            transform: rotate(-45deg);
-                        }
-
-                        :nth-child(4) {
-                            top: calc(50% - 3px);
-                            width: 0%;
-                            left: 50%;
-                        }
-                    `
-                }
-            }}
-        }
+                    :nth-child(4) {
+                        top: calc(50% - 3px);
+                        width: 0%;
+                        left: 50%;
+                    }
+                `
+            }
+        }}
     }
 }
+
 
 .overlay{
     height: 100%;
     width: 50%;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 50%;
     top: 0;
     display: flex;

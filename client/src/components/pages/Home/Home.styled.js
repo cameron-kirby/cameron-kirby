@@ -4,12 +4,12 @@ import section1bg from "../../../img/homebg.jpg"
 export const StyledHome = styled.div`
     #home-landing {
         width: 100%;
-        height: 99vh;
+        height: calc(100vh - 113px);
 
         .hero {
             position: relative;
             width: 100%;
-            height: 99vh;
+            height: calc(100vh - 113px);
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${section1bg});
             background-repeat: no-repeat;
             background-position: center;
