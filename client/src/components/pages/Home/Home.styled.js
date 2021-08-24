@@ -33,11 +33,21 @@ export const StyledHome = styled.div`
             flex-direction: column;
             color: var(--white);
 
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                text-align: center;
+            }
+
             h1 {
                 font-weight: 600;
                 span{
                     font-weight: 900;
-                    color: var(--orange)
+                    color: var(--orange);
+
+                    @media (max-width:481px)  { 
+                        /* smartphones, iPhone, portrait 480x320 phones */ 
+                        font-size: 4rem;
+                    }
                 }
             }
             h2 {

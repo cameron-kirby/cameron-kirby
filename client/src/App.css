@@ -26,8 +26,8 @@
   --margin-width: 55px;
 
   /* Mobile Sizes */
-  --mobile-heading-large: 5.6rem;
-  --mobile-heading-medium: 3.6rem;
+  --mobile-heading-large: 2.6rem;
+  --mobile-heading-medium: 2rem;
   --mobile-heading-small: 2.4rem;
   --mobile-paragraph: 1.11rem;
   --mobile-navbar-buttons: 2.4rem;
@@ -91,6 +91,27 @@ h5 {
 h6 {
   font-size: calc(var(--heading-small) - .6rem);
 }
+@media (max-width:481px)  { 
+  h1 {
+    font-size: var(--mobile-heading-large);
+  }
+  h2 {
+    font-size: var(--mobile-heading-medium);
+  }
+  h3 {
+    font-size: var(--mobile-heading-small);
+  }
+  h4 {
+    font-size: calc(var(--mobile-heading-small) - .2rem);
+  }
+  h5 {
+    font-size: calc(var(--mobile-heading-small) - .4rem);
+  }
+  h6 {
+    font-size: calc(var(--mobile-heading-small) - .6rem);
+  }
+}
+
 /* Font Weight */
 h1, h2 {
   font-weight: 900;
