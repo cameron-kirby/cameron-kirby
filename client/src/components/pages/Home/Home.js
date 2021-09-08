@@ -2,6 +2,13 @@ import React from "react"
 import { Link } from "react-router-dom";
 import { StyledHome } from './Home.styled'
 import { Folder, RightArrowAlt } from "@styled-icons/boxicons-solid"
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import 'swiper/swiper.min.css';
+import 'swiper/swiper-bundle.css';
+
+SwiperCore.use([Navigation, Pagination])
 
 
 const Home = () => {
@@ -22,42 +29,61 @@ const Home = () => {
                     <h3>Recent work</h3>
                 </div>
                 <div className="work-row">
-                    <div className="work-item">
-                        <div className="work-item-media">
-                            <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                    <Swiper
+                        spaceBetween={30}
+                        slidesPerView={"auto"}
+                        navigation
+                        pagination={{
+                        type: 'bullets',
+                        "dynamicBullets": true }}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                    >
+                        <SwiperSlide>
+                            <div className="work-item">
+                                <div className="work-item-media">
+                                    <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                                </div>
+                                <div className="work-item-body">
+                                    <h4>Work item</h4>
+                                    <p>This is a dummy work item!</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="work-item">
+                                <div className="work-item-media">
+                                    <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                                </div>
+                                <div className="work-item-body">
+                                    <h4>Work item</h4>
+                                    <p>This is a dummy work item!</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="work-item">
+                                <div className="work-item-media">
+                                    <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                                </div>
+                                <div className="work-item-body">
+                                    <h4>Work item</h4>
+                                    <p>This is a dummy work item!</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                        <div className="work-item">
+                            <div className="work-item-media">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                            <div className="work-item-body">
+                                <h4>Work item</h4>
+                                <p>This is a dummy work item!</p>
+                            </div>
                         </div>
-                        <div className="work-item-body">
-                            <h4>Work item</h4>
-                            <p>This is a dummy work item!</p>
-                        </div>
-                    </div>
-                    <div className="work-item">
-                        <div className="work-item-media">
-                            <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
-                        </div>
-                        <div className="work-item-body">
-                            <h4>Work item</h4>
-                            <p>This is a dummy work item!</p>
-                        </div>
-                    </div>
-                    <div className="work-item">
-                        <div className="work-item-media">
-                            <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
-                        </div>
-                        <div className="work-item-body">
-                            <h4>Work item</h4>
-                            <p>This is a dummy work item!</p>
-                        </div>
-                    </div>
-                    <div className="work-item">
-                        <div className="work-item-media">
-                            <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
-                        </div>
-                        <div className="work-item-body">
-                            <h4>Work item</h4>
-                            <p>This is a dummy work item!</p>
-                        </div>
-                    </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
                 <div className="work-sectionfooter">
                     <Link to="/work">

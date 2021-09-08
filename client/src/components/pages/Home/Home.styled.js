@@ -78,10 +78,7 @@ export const StyledHome = styled.div`
         }
 
         .work-row {
-            margin-left: calc(-1 * var(--margin-width));
             padding: 3rem var(--margin-width);
-            display: flex;
-            justify-content: space-between;
 
             @media (max-width:481px)  { 
                 /* smartphones, iPhone, portrait 480x320 phones */ 
@@ -89,14 +86,24 @@ export const StyledHome = styled.div`
                 padding: 3rem var(--mobile-margin-width);
             }
 
-            .work-item {
-                width: 25%;
-                padding-left: var(--margin-width);
+            .swiper-button-next, .swiper-button-prev {
+                color: var(--black);
+                top: 92%;
+            }
 
-                @media (max-width:481px)  { 
-                    /* smartphones, iPhone, portrait 480x320 phones */ 
-                    padding-left: var(--mobile-margin-width);
-                }
+            .swiper-pagination-bullet-active {
+                background: var(--black);
+            }
+
+            .swiper-pagination-bullets {
+                bottom: 25px;
+            }
+
+            .swiper-slide {
+                width: auto;
+            }
+
+            .work-item {
 
                 .work-item-media {
                     img {
@@ -116,7 +123,7 @@ export const StyledHome = styled.div`
                     }
 
                     p{
-                        padding-bottom: 1rem;
+                        padding-bottom: 7rem;
                         font-size: 1.2rem;
                         font-weight: 600;
                     }
