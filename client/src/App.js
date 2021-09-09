@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Switch, Route } from "react-router-dom";
 import './App.css';
 import { useOnClickOutside, useWindowDimensions } from "./hooks";
-import { Navigation } from "./components"
+import { Navigation, Page } from "./components"
 import { Home, Work, Profile } from "./components/pages"
 
 
@@ -18,10 +18,14 @@ function App() {
             </div>
                 <Switch>
                     <Route path="/work">
-                        <Work useWindowDimensions={useWindowDimensions}/>
+                        <Page title="CK / Work">
+                            <Work useWindowDimensions={useWindowDimensions}/>
+                        </Page> 
                     </Route>
                     <Route path="/profile">
-                        <Profile/>
+                        <Page title="CK / Profile">
+                            <Profile/>
+                        </Page>
                     </Route>
                     <Route path="/journal">
                         Hello journal!
@@ -30,7 +34,9 @@ function App() {
                         Hello contact!
                     </Route>
                     <Route path="/">
-                        <Home/>
+                        <Page title="CK / Home">
+                            <Home/>
+                        </Page>
                     </Route>
                 </Switch>
         </div>

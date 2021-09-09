@@ -1,17 +1,23 @@
-import React from "react"
+import React, { useRef } from "react"
 import { StyledProfile } from './Profile.styled'
 
 const Profile = ({ useWindowDimensions }) => {
+    const blurbRef = useRef(null)
+    const skillsRef = useRef(null)
+
+    const blurbScroll = () => blurbRef.current.scrollIntoView()
+    const skillsScroll = () => skillsRef.current.scrollIntoView()
+
     return (
         <StyledProfile>
             <section id="profile-landing">
                 <div className="page-links">
                     <ul>
                         <li>
-                            <button>Link 1</button>
+                            <button onClick={blurbScroll}>Link 1</button>
                         </li>
                         <li>
-                            <button>My skills</button>
+                            <button onClick={skillsScroll}>My skills</button>
                         </li>
                         <li>
                             <button>Link 3</button>
@@ -23,7 +29,7 @@ const Profile = ({ useWindowDimensions }) => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget sapien molestie, semper urna ac, pretium diam. Curabitur ultrices sodales felis nec aliquam. Donec ut felis non ligula ultricies tincidunt nec a risus. </p>
                 </div>
             </section>
-            <section id="profile-blurbs">
+            <section id="profile-blurbs" ref={blurbRef}>
                 <div className="section-heading">
                     <h3>Blurb Section Title</h3>
                 </div>
@@ -58,7 +64,7 @@ const Profile = ({ useWindowDimensions }) => {
                     </div>
                 </div>
             </section>
-            <section id="profile-skills">
+            <section id="profile-skills" ref={skillsRef}>
                 <div className="section-heading">
                     <h3>My skills</h3>
                 </div>

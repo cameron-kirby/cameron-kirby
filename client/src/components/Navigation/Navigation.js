@@ -1,10 +1,42 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { StyledNavigation } from './Navigation.styled'
 import { GithubSquare, Linkedin } from '@styled-icons/fa-brands'
 
 
 const Navigation = ({ navOpen, setNavOpen }) => {
+    const [scrollDir, setScrollDir] = useState("scrolling up");
+
+    useEffect(() => {
+        const threshold = 0;
+        let lastScrollY = window.pageYOffset;
+        let ticking = false;
+
+        const updateScrollDir = () => {
+            const scrollY = window.pageYOffset;
+
+            if (Math.abs(scrollY - lastScrollY) < threshold) {
+                ticking = false;
+                return;
+            }
+            setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
+            lastScrollY = scrollY > 0 ? scrollY : 0;
+            ticking = false;
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollDir);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+        console.log(scrollDir);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [scrollDir]);
+
     let headerColor = "white"
     let textColor = "black"
 
@@ -23,7 +55,7 @@ const Navigation = ({ navOpen, setNavOpen }) => {
     }
 
     return (
-        <StyledNavigation navOpen={navOpen} headerColor={headerColor} textColor={textColor}>
+        <StyledNavigation navOpen={navOpen} headerColor={headerColor} textColor={textColor} scrollDir={scrollDir}>
             <div className="header">
                 <Link to="/" className="logo" onClick={navOpen ? handleMenuToggle:undefined}>CAMERON KIRBY</Link>
             </div>

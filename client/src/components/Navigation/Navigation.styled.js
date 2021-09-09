@@ -10,6 +10,13 @@ export const StyledNavigation = styled.nav`
     align-items: center;
     justify-content: space-between;
     background-color: ${props => props.headerColor};
+    transform: translateY${props => {
+        if (props.scrollDir === "scrolling up") {return("(0)")}
+        else {
+            return("(-100%)")
+        }
+    }};
+    transition: .3s ease-in-out;
 
     @media (max-width:481px)  { 
         /* smartphones, iPhone, portrait 480x320 phones */ 
@@ -35,7 +42,11 @@ export const StyledNavigation = styled.nav`
     z-index: 3;
     /* Animation */
     transform: rotate(0deg);
-    transition: .5s ease-in-out;
+    transform: translateY${props => {
+        if (props.scrollDir === "scrolling down" && props.navOpen === false) {return("(-700%)")}
+        else {return("(0)")}
+    }};
+    transition: .3s ease-in-out;
 
     @media (max-width:481px)  { 
         /* smartphones, iPhone, portrait 480x320 phones */ 
