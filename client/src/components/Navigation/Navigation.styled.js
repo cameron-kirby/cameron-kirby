@@ -43,7 +43,7 @@ export const StyledNavigation = styled.nav`
     /* Animation */
     transform: rotate(0deg);
     transform: translateY${props => {
-        if (props.scrollDir === "scrolling down" && props.navOpen === false) {return("(-700%)")}
+        if (props.scrollDir === "scrolling down" && props.navOpen === false) {return("(-96px)")}
         else {return("(0)")}
     }};
     transition: .3s ease-in-out;
