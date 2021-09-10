@@ -36,8 +36,6 @@ const Home = () => {
                         pagination={{
                         type: 'bullets',
                         "dynamicBullets": true }}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                     >
                         <SwiperSlide>
                             <div className="work-item">
