@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import './App.css';
 import { useOnClickOutside, useWindowDimensions } from "./hooks";
 import { Navigation, Page } from "./components"
-import { Home, Work, Profile } from "./components/pages"
+import { Home, Work, Profile, WorkStudy } from "./components/pages"
 
 
 function App() {
@@ -17,7 +17,10 @@ function App() {
                 <Navigation navOpen={navOpen} setNavOpen={setNavOpen}/>
             </div>
                 <Switch>
-                    <Route path="/work">
+                    <Route path="/work/:workId">
+                        <WorkStudy/>
+                    </Route>
+                    <Route exact path="/work">
                         <Page title="CK / Work">
                             <Work useWindowDimensions={useWindowDimensions}/>
                         </Page> 

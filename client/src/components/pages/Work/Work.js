@@ -1,36 +1,37 @@
 import React, { useRef, useEffect } from "react"
 import { StyledWork } from './Work.styled'
+import { Link } from "react-router-dom";
 
 const workdata = [{
     img_src: "https://via.placeholder.com/346x230",
     img_height: 230,
     title: "Operational Insights",
     body: "This is a dummy work item!",
-    size:"small"
+    workId: "operational-insights"
 },{
     img_src: "https://via.placeholder.com/346x432",
     img_height: 432,
     title: "Work item 2",
     body: "This is a dummy work item!",
-    size:"large"
+    workId: "undefined"
 },{
     img_src: "https://via.placeholder.com/346x230",
     img_height: 230,
     title: "Work item 3",
     body: "This is a dummy work item!",
-    size:"small"
+    workId: "undefined"
 },{
     img_src: "https://via.placeholder.com/346x230",
     img_height: 230,
     title: "Work item 4",
     body: "This is a dummy work item!",
-    size:"small"
+    workId: "undefined"
 },{
     img_src: "https://via.placeholder.com/346x432",
     img_height: 432,
     title: "Work item 5",
     body: "This is a dummy work item!",
-    size:"large"
+    workId: "undefined"
 }]
 
 const Work = ({ useWindowDimensions }) => {
@@ -83,17 +84,22 @@ const Work = ({ useWindowDimensions }) => {
                 <div className="masonry" ref={masonryNode}>
                     {workdata.map((data, index) => {
                         return(
-                            <div className="work-item" style={{
-                                position: "absolute",
-                            }} key={index}>
-                                <div className="work-item-media">
-                                    <img src={data.img_src} alt={data.title} width="346px" height={data.img_height+"px"}></img>
+                            
+                                <div className="work-item" 
+                                    style={{
+                                        position: "absolute",
+                                    }} 
+                                    key={index}>
+                                    <Link to={"/work/" + data.workId}>
+                                        <div className="work-item-media">
+                                            <img src={data.img_src} alt={data.title} width="346px" height={data.img_height+"px"}></img>
+                                        </div>
+                                        <div className="work-item-body">
+                                            <h3>{data.title}</h3>
+                                            <p>{data.body}</p>
+                                        </div>
+                                    </Link>
                                 </div>
-                                <div className="work-item-body">
-                                    <h3>{data.title}</h3>
-                                    <p>{data.body}</p>
-                                </div>
-                            </div>
                         )
                     })}
                 </div>

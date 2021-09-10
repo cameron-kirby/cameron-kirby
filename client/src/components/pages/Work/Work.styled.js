@@ -62,6 +62,11 @@ export const StyledWork = styled.div`
                     padding-left:0;
                 }
 
+                a {
+                    text-decoration: none;
+                    color: var(--black);
+                }
+
                 .work-item-media {
                     img {
                         display: block;
