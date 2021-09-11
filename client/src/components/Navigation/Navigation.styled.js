@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledNavigation = styled.nav`
 .header {
     position: fixed;
-    z-index: 1; /* Sit on top */
+    z-index: 100; /* Sit on top */
     width: 100%;
     padding: 30px var(--margin-width);
     display: flex;
@@ -39,7 +39,7 @@ export const StyledNavigation = styled.nav`
     cursor: pointer;
     width: 1.5rem;
     padding: .8rem;
-    z-index: 3;
+    z-index: 103;
     /* Animation */
     transform: rotate(0deg);
     transform: translateY${props => {
@@ -114,7 +114,7 @@ export const StyledNavigation = styled.nav`
     height: 100%;
     width: 50%;
     position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
+    z-index: 102; /* Sit on top */
     left: 50%;
     top: 0;
     display: flex;
