@@ -1,23 +1,23 @@
 import React from "react"
-import {
-    Switch,
-    Route,
-} from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import Page from "../../../Page"
-import { OperationalInsights } from "./Studies";
+import { OperationalInsights, Dummy } from "./Studies";
 
 const WorkStudy = () => {
 
     return (
         <div>
-            <Switch>
-                <Route url={`work/operational-insights`}>
-                    <Page title="CK / Operational Insights">
-                        <OperationalInsights />
-                    </Page>
-                </Route>
-            </Switch>
+            <Route path={"/work/operational-insights"} >
+                <Page title="CK / Operational Insights">
+                    <OperationalInsights />
+                </Page>
+            </Route>
+            <Route path={"/work/dummy"} >
+                <Page title="CK / Dummy Project">
+                    <Dummy />
+                </Page>
+            </Route>
         </div>
     );
 }

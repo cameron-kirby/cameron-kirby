@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import introbg from "../../../../../../img/work/operational-insights/landing-image.jpg"
 
-export const StyledOperationalInsights = styled.div`
+
+export const StyledStudy = styled.div`
 
     #landing {
         width: 100%;
@@ -11,7 +11,7 @@ export const StyledOperationalInsights = styled.div`
             width: 100%;
             height: 100vh;
             margin-bottom: 120px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${introbg});
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${props => props.title_bg});
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -25,9 +25,18 @@ export const StyledOperationalInsights = styled.div`
             color: var(--white);
             width: 80%;
             padding-left: 8.33333%;
-            font-size: 3rem;
-            font-weight: 600;
-            line-height: 1.1;
+
+            span {
+                font-weight: 100;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 3rem;
+                font-weight: 600;
+                line-height: 1.1;
+            }
         }
     }
 

@@ -11,9 +11,9 @@ const workdata = [{
 },{
     img_src: "https://via.placeholder.com/346x432",
     img_height: 432,
-    title: "Work item 2",
+    title: "Dummy Project",
     body: "This is a dummy work item!",
-    workId: "undefined"
+    workId: "dummy"
 },{
     img_src: "https://via.placeholder.com/346x230",
     img_height: 230,

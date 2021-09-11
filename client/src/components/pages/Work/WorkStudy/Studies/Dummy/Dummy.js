@@ -1,9 +1,9 @@
 import React from "react"
 import { StyledStudy } from '../Study.styled'
 // images
-import title_bg from "../../../../../../img/work/operational-insights/landing-image.jpg"
+import title_bg from "../../../../../../img/work/dummy/landing-image.jpg"
 
-const OperationalInsights = () => {
+const Dummy = () => {
 
     return (
         <StyledStudy title_bg={title_bg}>
@@ -11,7 +11,7 @@ const OperationalInsights = () => {
                 <div className="title-spacer"></div>
                 <div className="title-sticky">
                     <span>PROJECT TITLE:</span>
-                    <h3>Operational Insights</h3>
+                    <h3>Dummy Project</h3>
                 </div>
             </section>
             <section id="description">
@@ -40,4 +40,4 @@ const OperationalInsights = () => {
     );
 }
 
-export default OperationalInsights;
+export default Dummy;
