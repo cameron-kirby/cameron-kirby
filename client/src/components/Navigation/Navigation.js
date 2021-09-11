@@ -36,12 +36,12 @@ const Navigation = ({ navOpen, setNavOpen }) => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [scrollDir]);
 
-    let headerColor = "white"
-    let textColor = "black"
+    let headerColor = "transparent"
+    let textColor = "white"
 
-    if (useLocation().pathname === "/") {
-        headerColor = "transparent"
-        textColor = "white"
+    if (useLocation().pathname === "/work") {
+        headerColor = "white"
+        textColor = "black"
     }
     if(useLocation().pathname === "/profile") {
         headerColor = "black"
