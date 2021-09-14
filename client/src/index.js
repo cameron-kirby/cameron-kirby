@@ -5,11 +5,13 @@ import 'normalize.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ScrollToTop } from './components'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+        <ScrollToTop />
+        <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

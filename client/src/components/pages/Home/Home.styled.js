@@ -133,7 +133,6 @@ export const StyledHome = styled.div`
 
         .work-sectionfooter {
             padding: 2rem var(--margin-width);
-            border-bottom: 1px solid rgba(159,174,176,.35);
             background-color: var(--black);
             color: var(--white);
 
