@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import './App.css';
 import { useOnClickOutside, useWindowDimensions } from "./hooks";
 import { Navigation, Page } from "./components"
-import { Home, Work, Profile, WorkStudy } from "./components/pages"
+import { Home, Work, Profile, WorkStudy, NoMatch } from "./components/pages"
 
 
 function App() {
@@ -30,15 +30,14 @@ function App() {
                             <Profile/>
                         </Page>
                     </Route>
-                    <Route path="/journal">
-                        Hello journal!
-                    </Route>
-                    <Route path="/contact">
-                        Hello contact!
-                    </Route>
-                    <Route path="/">
+                    <Route exact path="/">
                         <Page title="CK / Home">
                             <Home/>
+                        </Page>
+                    </Route>
+                    <Route path="*">
+                        <Page title="CK / 404">
+                            <NoMatch />
                         </Page>
                     </Route>
                 </Switch>
