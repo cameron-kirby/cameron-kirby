@@ -1,7 +1,16 @@
 import React from "react"
 import { StyledStudy } from '../Study.styled'
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/swiper.min.css';
+import 'swiper/swiper-bundle.css';
+
+
 // images
 import title_bg from "../../../../../../img/work/operational-insights/landing-image.jpg"
+
+// setup swiper modules
+SwiperCore.use([Navigation, Pagination])
 
 const OperationalInsights = () => {
 
@@ -34,6 +43,49 @@ const OperationalInsights = () => {
                             <li>ANGULAR</li>
                         </ul>
                     </div>
+                </div>
+            </section>
+            <section id="screenshots">
+                <div className="screenshot-row">
+                    <Swiper
+                        spaceBetween={30}
+                        slidesPerView={"auto"}
+                        navigation
+                        pagination={{
+                        type: 'bullets',
+                        "dynamicBullets": true }}
+                    >
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="screenshot-item">
+                                <img src="https://via.placeholder.com/346x230" alt="Work title" width="346px" height="230"></img>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </section>
         </StyledStudy>

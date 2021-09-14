@@ -97,4 +97,34 @@ export const StyledStudy = styled.div`
         }
     }
 
+    #screenshots {
+        width: 100%;
+        background-color: var(--white);
+        padding: 4rem var(--margin-width) 4rem;
+
+        .screenshot-row {
+            @media (max-width:481px)  { 
+                /* smartphones, iPhone, portrait 480x320 phones */ 
+                margin-left: calc(-1 * var(--mobile-margin-width));
+                padding: 3rem var(--mobile-margin-width);
+            }
+
+            .swiper-button-next, .swiper-button-prev {
+                color: var(--black);
+            }
+
+            .swiper-pagination-bullet-active {
+                background: var(--black);
+            }
+
+            .swiper-pagination-bullets {
+                bottom: 10px;
+            }
+
+            .swiper-slide {
+                width: auto;
+            }
+        }
+    }
+
 `
