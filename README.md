@@ -6,6 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=ffffff)](https://www.linkedin.com/in/kameroncirby/)
 [![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=ffffff)](mailto:cameronevankirby@gmail.com)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=for-the-badge&logo=windowsterminal&logoColor=ffffff)](https://www.cameronkirby.dev/)
 
 ### 🛠 Languages and Tools
 
