@@ -1,6 +1,6 @@
 ### 👋 Hey, I'm Cameron Kirby
 
-- :desktop_computer: I'm a fullstack web developer
+- :desktop_computer: I'm a fullstack web developer and UI/UX designer!
 - :speech_balloon: Ask me about React.js, JavaScript, UI/UX, or literally anything!
 - :mailbox: You can reach me with the links below
 
