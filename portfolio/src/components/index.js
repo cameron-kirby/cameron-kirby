@@ -1,1 +1,1 @@
-export { default as HomeSlide } from './HomeSlide'
+export { default as Frame } from './frame'
