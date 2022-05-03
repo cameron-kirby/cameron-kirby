@@ -11,6 +11,7 @@ export const StyledFrame = styled.div`
         width: 100%;
         display: flex;
 
+        background-color: #282c34;
         border-bottom: 1px solid #434343;
         box-shadow: 0 0 1.6rem rgb(0 0 0 / 70%);
 
@@ -52,16 +53,38 @@ export const StyledFrame = styled.div`
     }
 
     .side-nav {
-        position:fixed;
+        position: fixed;
+        z-index: 1000;
         left: 0;
         height: 100%;
         width: 4rem;
-        align-items: flex-end;
-        justify-content: center;
-        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         border-right: 1px solid #434343;
         border-top: none;
         background-color: transparent;
+
+        .side-item {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            border-top: 1px solid #434343;
+            width: 100%;
+            padding: .5rem 0rem;
+            transition: all 0.5s;
+
+            svg {
+                width: 75%;
+                color: #ffffff;
+            }
+
+            :hover {
+                background-color: red;
+            }
+        }
+        
     }
 
     .content {

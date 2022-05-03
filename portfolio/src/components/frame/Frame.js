@@ -1,6 +1,8 @@
 import React from "react"
 import { StyledFrame } from './Frame.styled'
 import Portfolio from '../portfolio'
+// icons
+import { LinkedinSquare, Github } from '@styled-icons/boxicons-logos'
 
 const Frame = () => {
 
@@ -18,10 +20,12 @@ const Frame = () => {
                 </ul>
             </nav>
             <nav className='side-nav'>
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <a href='https://github.com/cameron-kirby' rel='noreferrer' target='_blank' className='side-item'>
+                        <Github />
+                </a>
+                <a href='https://www.linkedin.com/in/kameroncirby/' rel='noreferrer' target='_blank' className='side-item'>
+                    <LinkedinSquare />
+                </a>
             </nav>
             <div className='content'>
                 <div className='heading'>
