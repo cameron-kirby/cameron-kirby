@@ -40,7 +40,7 @@ export const StyledPortfolio = styled.div`
             .item-title {
                 h2 {
                     color: #ffffff;
-                    font-size: 1.4rem;
+                    font-size: 2rem;
                     font-weight: 600;
                     margin-bottom: 0.25rem;
                     text-transform: uppercase;
@@ -49,14 +49,22 @@ export const StyledPortfolio = styled.div`
 
             .item-body {
                 display: flex;
+                color: #ffffff;
 
                 .item-body-text {
                     width: 80%;
+                    font-size: 1.4rem;
                 }
 
                 .item-body-icons {
                     width: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
+                    svg {
+                        width: 40%;
+                    }
                 }
             }
         }
