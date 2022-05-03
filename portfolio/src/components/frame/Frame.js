@@ -3,6 +3,7 @@ import { StyledFrame } from './Frame.styled'
 import Portfolio from '../portfolio'
 // icons
 import { LinkedinSquare, Github } from '@styled-icons/boxicons-logos'
+import { DocumentText } from '@styled-icons/heroicons-solid'
 
 const Frame = () => {
 
@@ -10,14 +11,13 @@ const Frame = () => {
         <StyledFrame>
             <nav className='top-nav'>
                 <div className='logo'>CK</div>
-                <ul className="menu-list">
-                    <li>
-                        <p>CV</p>
-                    </li>
-                    <li>
-                        <p>CONTACT</p>
-                    </li>
-                </ul>
+                <div className="menu">
+                        <a>
+                            <DocumentText />
+                            CV
+                        </a>
+                        <a>CONTACT</a>
+                </div>
             </nav>
             <nav className='side-nav'>
                 <a href='https://github.com/cameron-kirby' rel='noreferrer' target='_blank' className='side-item'>

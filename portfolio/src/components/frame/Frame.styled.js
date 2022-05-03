@@ -27,26 +27,33 @@ export const StyledFrame = styled.div`
             color: #ffffff;
         }
 
-        .menu-list {
+        .menu {
             display: flex;
             height: 100%;
 
-            li {
+            a {
                 position: relative;
                 border-right: 1px solid #434343;
                 overflow: hidden;
                 display: flex;
-                align-items: stretch;
                 border-bottom: none;
-                padding: 0;
+                padding: 0 1rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                transition: all 0.5s;
 
-                p {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0 1rem;
+                :hover {
+                    background-color: red;
+                }
 
+                svg {
                     color: #ffffff;
+                    width: 1.8rem;
+                    padding-right: .2rem;
                 }
             }
         }
